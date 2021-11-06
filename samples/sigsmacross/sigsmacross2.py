@@ -20,6 +20,7 @@
 ###############################################################################
 from datetime import datetime
 import backtrader as bt
+from nsepy import get_history
 
 
 class SmaCross(bt.SignalStrategy):
