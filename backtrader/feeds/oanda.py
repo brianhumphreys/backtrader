@@ -234,6 +234,7 @@ class OandaData(with_metaclass(MetaOandaData, DataBase)):
             self._state = self._ST_HISTORBACK
             return True
 
+        print('BACKTRADER')
         self.qlive = self.o.streaming_prices(self.p.dataname, tmout=tmout)
         if instart:
             self._statelivereconn = self.p.backfill_start
