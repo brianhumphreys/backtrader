@@ -1433,7 +1433,7 @@ class Strategy(with_metaclass(MetaStrategy, StrategyBase)):
         for name, data in iteritems(self.env.datasbyname):
             posbyname[name] = positions[data]
             print('WOOT')
-            pprint(vars(posbyname[name]))
+            print(posbyname[name]['size'])
 
         return posbyname
 
