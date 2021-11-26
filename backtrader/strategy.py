@@ -27,6 +27,7 @@ import datetime
 import inspect
 import itertools
 import operator
+from pprint import pprint
 
 from .utils.py3 import (filter, keys, integer_types, iteritems, itervalues,
                         map, MAXINT, string_types, with_metaclass)
@@ -1427,9 +1428,12 @@ class Strategy(with_metaclass(MetaStrategy, StrategyBase)):
         broker = broker or self.broker
         positions = broker.positions
 
+
         posbyname = collections.OrderedDict()
         for name, data in iteritems(self.env.datasbyname):
             posbyname[name] = positions[data]
+            print('WOOT')
+            pprint(vars(posbyname[name]))
 
         return posbyname
 
