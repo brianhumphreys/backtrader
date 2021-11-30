@@ -1432,8 +1432,8 @@ class Strategy(with_metaclass(MetaStrategy, StrategyBase)):
         posbyname = collections.OrderedDict()
         for name, data in iteritems(self.env.datasbyname):
             posbyname[name] = positions[data]
-            print('WOOT')
-            print(posbyname[name].size)
+            # print('WOOT')
+            # print(posbyname[name].size)
 
         return posbyname
 
